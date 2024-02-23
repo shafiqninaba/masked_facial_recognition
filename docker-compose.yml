@@ -1,0 +1,21 @@
+services:
+  pythonbackend:
+    build: ./docker_backend/
+    depends_on:
+      - mysql
+    ports:
+      - "8080:8080"
+  pythonapp:
+    build: ./docker_webapp/
+    depends_on:
+      - mysql
+    ports:
+      - "5000:5000"
+  mysql:
+    build: ./docker_mysql/
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_DATABASE: 'masked_recognition'
+    ports:
+      - "3306:3306"
