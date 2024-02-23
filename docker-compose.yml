@@ -1,18 +1,18 @@
 services:
   pythonbackend:
-    build: ./docker_backend/
+    image: shafiqninaba/fyp:backend-1.0
     depends_on:
       - mysql
     ports:
       - "8080:8080"
   pythonapp:
-    build: ./docker_webapp/
+    image: shafiqninaba/fyp:app-1.0
     depends_on:
       - mysql
     ports:
       - "5000:5000"
   mysql:
-    build: ./docker_mysql/
+    image: shafiqninaba/fyp:sql-1.0
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 'root'
