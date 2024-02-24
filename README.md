@@ -10,7 +10,7 @@ This repository contains the [docker-compose.yml file](docker-compose.yml) that 
 ***
 ## About the project
 
-This project, titled "Face Recognition w/ accessories using CNN", is a Final Year Project by Shafiq Ninaba, a Year 4 Electrical & Electronic Engineering student at Nanyang Technological University (NTU).
+This project, titled "Face Recognition w/ accessories using CNN", is a Final Year Project by [Shafiq Ninaba](https://www.linkedin.com/in/shafiq-ninaba/), a Year 4 Electrical & Electronic Engineering student at Nanyang Technological University (NTU).
 
 The project uses Convolutional Neural Networks (CNN) for face recognition, with a special focus on recognizing faces with accessories, more particularly surgical masks. The application uses a Convolutional Neural Network (CNN) model trained on a database of faces to recognize individuals in real-time video feeds. The model was implemented using Keras and TensorFlow, and the application was built using Flask for the backend and HTML/CSS/JavaScript for the frontend.
 
