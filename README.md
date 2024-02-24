@@ -33,7 +33,7 @@ The Backend container is responsible for data processing and model training. It 
 _How the containers communicate with each other_
 
 ## Modelling
-The model used in this project is a CNN model trained on the Yale Face Database. The model was trained to recognize faces with and without masks. The model was implemented using Keras and TensorFlow, and was trained on a database of faces augmented with masks using the MaskTheFace tool. You can view the images used for training the model here.
+The model used in this project is a CNN model trained on the [Yale Face Database](http://cvc.cs.yale.edu/cvc/projects/yalefaces/yalefaces.html). The model was trained to recognize faces with and without masks. The model was implemented using Keras and TensorFlow, and was trained on a database of faces augmented with masks using the [MaskTheFace](https://github.com/aqeelanwar/MaskTheFace) tool.
 
 The process starts by reading configuration parameters and connecting to the database container to fetch training, testing, and validation data. The images, stored as base64 strings, are converted to image arrays and saved as temporary files. An ImageDataGenerator is used to augment the images. The model architecture consists of three convolutional layers, a flatten layer, a dense layer with l2 regularization, a dropout layer, and a final softmax layer.
 
@@ -45,18 +45,18 @@ The model is trained using the Adam optimizer and categorical crossentropy loss.
 The modelling process is still undergoing experimentation. Other methods to improve the model's performance, such as transfer learning, will also be explored.
 
 ***
-## Web Application features
+## Web Application Features
 This section demonstrates the features of the web application.
 
 ### Upload
-Users can upload a new identity into the system. The camera will capture 11 images in a quick succession of 0.5s interval and check whether there is a face detected in each image. The user can then enter their identity and the images will be uploaded into the database, preprocessed, augmented with a mask and the model will then be retrained with the new identity.
+Users can upload a new identity into the system. The camera will capture 11 images in a quick succession of 0.5s intervals and check whether there is a face detected in each image. The user can then enter their identity and the images will be uploaded into the database, preprocessed, augmented with a mask and the model will then be retrained with the new identity.
 
 ![alt text](images/upload.jpg "Upload Demonstration") <br>
 _Uploading a new identity to the system_
 
 
 ### Database
-Users can view the images of the identities in the database here.
+Users can view the images of the identities in the database.
 ![alt text](images/database.jpg "Database Demonstration") <br>
 _View the images of the different identities in the database_
 
