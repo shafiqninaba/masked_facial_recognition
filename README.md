@@ -9,7 +9,7 @@ This repository contains the [docker-compose.yml file](docker-compose.yml) that 
 4. After the containers are created, the web application can be accessed at http://localhost:5000/
 5. Once you are done with the application, `docker-compose stop` to stop the containers or `docker-compose down` to remove the containers
 
-_If any of the ports (5000,8080,3306) are used up, refer to the Ports section below_
+_If any of the ports (5000,8080,3306) are used up, refer to the [Ports](README.md#ports) section below_
 
 ### Ports
 <table>
