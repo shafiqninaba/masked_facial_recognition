@@ -19,7 +19,7 @@ _If any of the ports (5000,8080,3306) are used up, refer to the Ports section be
   <tr><td>MYSQL_HOST_PORT</td><td>3306</td></tr>
 </table>
 
-To set your own ports, you can specify them with the docker compose command. For e.g., `PYTHONBACKEND_HOST_PORT=8081 PYTHONAPP_HOST_PORT=5001 MYSQL_HOST_PORT=3307 docker-compose up`.
+To set your own ports, you can specify them with the docker compose command. For e.g., Windows Powershell: `$env:PYTHONBACKEND_HOST_PORT="8081"; $env:PYTHONAPP_HOST_PORT="5001"; $env:MYSQL_HOST_PORT="3307"; docker-compose up`.
 
 ***
 ## About the project
