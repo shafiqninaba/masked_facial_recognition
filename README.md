@@ -9,6 +9,18 @@ This repository contains the [docker-compose.yml file](docker-compose.yml) that 
 4. After the containers are created, the web application can be accessed at http://localhost:5000/
 5. Once you are done with the application, `docker-compose stop` to stop the containers or `docker-compose down` to remove the containers
 
+_If any of the ports (5000,8080,3306) are used up, refer to the Ports section below_
+
+### Ports
+<table>
+  <th>Variable</th><th>Default value</th>
+  <tr><td>PYTHONBACKEND_HOST_PORT</td><td>8080</td></tr>
+  <tr><td>PYTHONAPP_HOST_PORT</td><td>5000</td></tr>
+  <tr><td>MYSQL_HOST_PORT</td><td>3306</td></tr>
+</table>
+
+To set your own ports, you can specify them with the docker compose command. For e.g., `PYTHONBACKEND_HOST_PORT=8081 PYTHONAPP_HOST_PORT=5001 MYSQL_HOST_PORT=3307 docker-compose up`.
+
 ***
 ## About the project
 
