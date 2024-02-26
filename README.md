@@ -5,7 +5,7 @@ This repository contains the [docker-compose.yml file](docker-compose.yml) that 
 ## Instructions
 1. Ensure that Docker Desktop is running.
 2. Download the [docker-compose.yml file](docker-compose.yml) into an empty directory.
-3. Run the command `docker-compose up` in the same directory as the docker-compose.yml file.
+3. Run the command `docker-compose up` in the same directory as the docker-compose.yml file. (this will take approx. 10 mins depending on your network)
 4. After the containers are created, the web application can be accessed at http://localhost:5000/
 5. Once you are done with the application, `docker-compose stop` to stop the containers or `docker-compose down` to remove the containers
 
