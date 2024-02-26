@@ -3,19 +3,28 @@ services:
     image: shafiqninaba/fyp:backend-1.0
     depends_on:
       - mysql
+    environment:
+      - PYTHONAPP_HOST_PORT=${PYTHONAPP_HOST_PORT:-5000}
+      - PYTHONBACKEND_HOST_PORT=${PYTHONBACKEND_HOST_PORT:-8080}
+      - MYSQL_HOST_PORT=${MYSQL_HOST_PORT:-3306}
     ports:
-      - "8080:8080"
+      - "${PYTHONBACKEND_HOST_PORT:-8080}:8080"
   pythonapp:
     image: shafiqninaba/fyp:app-1.0
     depends_on:
       - mysql
+    environment:
+      - PYTHONAPP_HOST_PORT=${PYTHONAPP_HOST_PORT:-5000}
+      - PYTHONBACKEND_HOST_PORT=${PYTHONBACKEND_HOST_PORT:-8080}
+      - MYSQL_HOST_PORT=${MYSQL_HOST_PORT:-3306}
     ports:
-      - "5000:5000"
+      - "${PYTHONAPP_HOST_PORT:-5000}:5000"
   mysql:
     image: shafiqninaba/fyp:sql-1.0
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 'root'
       MYSQL_DATABASE: 'masked_recognition'
+      MYSQL_HOST_PORT: ${MYSQL_HOST_PORT:-3306}
     ports:
-      - "3306:3306"
+      - "${MYSQL_HOST_PORT:-3306}:3306"
